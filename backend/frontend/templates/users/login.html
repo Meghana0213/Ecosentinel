@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoSentinel Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+#dff7df,
+#ffffff,
+#e8f5e9
+);
+
+overflow:hidden;
+}
+
+.container{
+
+width:550px;
+
+background:white;
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.15);
+
+text-align:center;
+
+position:relative;
+}
+
+.logo-icon{
+
+font-size:60px;
+
+margin-bottom:10px;
+}
+
+.logo h1{
+
+font-size:60px;
+
+font-weight:800;
+
+color:#16a34a;
+
+margin-bottom:10px;
+}
+
+.logo p{
+
+font-size:18px;
+
+color:#555;
+
+line-height:1.6;
+
+margin-bottom:35px;
+}
+
+.error{
+
+background:#ffe5e5;
+
+color:red;
+
+padding:12px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+}
+
+.input-group{
+
+margin-bottom:20px;
+}
+
+.input-group input{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+background:#eef3fb;
+
+font-size:18px;
+}
+
+.options{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+font-size:15px;
+}
+
+.options a{
+
+text-decoration:none;
+
+color:#16a34a;
+
+font-weight:600;
+}
+
+button{
+
+width:100%;
+
+padding:18px;
+
+background:#16a34a;
+
+color:white;
+
+border:none;
+
+border-radius:15px;
+
+font-size:22px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+button:hover{
+
+background:#15803d;
+}
+
+.register{
+
+margin-top:30px;
+
+font-size:17px;
+}
+
+.register a{
+
+text-decoration:none;
+
+color:#16a34a;
+
+font-weight:700;
+}
+
+.footer{
+
+margin-top:30px;
+
+font-size:14px;
+
+color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+<div class="logo-icon">♻️</div>
+
+<h1>EcoSentinel</h1>
+
+<p>
+AI Driven Smart Waste Monitoring & Collection System
+</p>
+
+</div>
+
+{% if error %}
+<div class="error">
+{{ error }}
+</div>
+{% endif %}
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="input-group">
+
+<input
+type="text"
+name="username"
+placeholder="Enter Username"
+required>
+
+</div>
+
+<div class="input-group">
+
+<input
+type="password"
+name="password"
+placeholder="Enter Password"
+required>
+
+</div>
+
+<div class="options">
+
+<label>
+<input type="checkbox">
+ Remember Me
+</label>
+
+<a href="#">
+Forgot Password?
+</a>
+
+</div>
+
+<button type="submit">
+🔐 Login
+</button>
+
+</form>
+
+<div class="register">
+
+Don't have an account?
+
+<a href="/register/">
+Create New Account
+</a>
+
+</div>
+
+<div class="footer">
+
+🌱 Together for a Cleaner, Greener Tomorrow
+
+</div>
+
+</div>
+
+</body>
+</html>
