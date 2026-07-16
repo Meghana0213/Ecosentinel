@@ -1,1 +1,16 @@
+Research Paper Update - Phase 2
+
+- Studied AI and IoT integration for smart waste monitoring.
+- Reviewed waste prediction and collection scheduling.
+- Analyzed smart bin monitoring and fill-level detection.
+- Reviewed dashboard features and complaint tracking.
+- Updated research notes based on implementation study.
+
+
+Research Paper Review - Phase 3
+
+- Studied AI-based waste prediction techniques.
+- Reviewed smart bin fill-level detection.
+- Analyzed route optimization for waste collection vehicles.
+- Reviewed future enhancements for smart waste management.
 
